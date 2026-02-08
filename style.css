@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+/* Controls */
+.controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+}
+
+.controls button {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.controls button:hover {
+    background: #e0e0e0;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 20px 24px 0;
+    max-width: 600px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #888;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 6px 14px;
+    border-radius: 100px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+nav a:hover {
+    color: #1a1a1a;
+    background-color: #f0f0f0;
+}
+
+nav a.active {
+    color: #1a1a1a;
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+/* Profile */
+.profile {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.title {
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+/* Page title (subpages) */
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+/* Page content */
+.page-content {
+    margin-bottom: 48px;
+}
+
+.page-content p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.page-content .intro {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 32px;
+}
+
+/* Entries (work, projects) */
+.entry {
+    margin-bottom: 32px;
+}
+
+.entry h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.entry-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.entry ul {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.entry li {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 6px;
+    transition: color 0.3s;
+}
+
+.entry p {
+    font-size: 15px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+/* Achievements */
+.achievement {
+    margin-bottom: 24px;
+}
+
+.achievement h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.achievement p {
+    font-size: 15px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+/* Section headings */
+.page-content h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    transition: border-color 0.3s;
+}
+
+.page-content h2:first-child {
+    margin-top: 0;
+}
+
+/* Bio */
+.bio {
+    margin-bottom: 48px;
+}
+
+.bio p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.bio p:last-child {
+    margin-bottom: 0;
+}
+
+/* Links */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.links a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+    transition: border-color 0.2s, color 0.3s;
+}
+
+.links a:hover {
+    border-color: #1a1a1a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+    color: #999;
+    transition: color 0.3s;
+}
+
+/* =================== */
+/* Dark mode           */
+/* =================== */
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark .title {
+    color: #aaa;
+}
+
+body.dark .bio p,
+body.dark .page-content p,
+body.dark .entry li,
+body.dark .entry p {
+    color: #ccc;
+}
+
+body.dark .page-content .intro {
+    color: #999;
+}
+
+body.dark .achievement p {
+    color: #aaa;
+}
+
+body.dark .entry-meta {
+    color: #777;
+}
+
+body.dark .page-content h2 {
+    border-color: #333;
+}
+
+body.dark nav a {
+    color: #777;
+}
+
+body.dark nav a:hover {
+    color: #e0e0e0;
+    background-color: #2a2a2a;
+}
+
+body.dark nav a.active {
+    color: #e0e0e0;
+    background-color: #2a2a2a;
+}
+
+body.dark .links a {
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark .links a:hover {
+    border-color: #e0e0e0;
+}
+
+body.dark footer {
+    color: #666;
+}
+
+body.dark .controls button {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark .controls button:hover {
+    background: #3a3a3a;
+}

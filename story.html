@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Story — Marco Eterno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <button id="dark-toggle" onclick="toggleDark()">🌙</button>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html" class="active">My Story</a>
+        <a href="work.html">Work &amp; Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="personal.html">Personal</a>
+    </nav>
+
+    <main>
+        <h1 class="page-title">My Life Story</h1>
+
+        <section class="page-content">
+            <p>
+                I grew up in the smallest city in Italy, where the status of your family determined the success you were entitled to have in life. As a result, my teachers told me multiple times that I would not have made it to 5th grade, let alone to high school.
+            </p>
+            <p>
+                As a way to escape from that reality, I grew an immense passion for science and problem solving: I built a chemistry lab in my garage at age 12, and by the time I finished high school, I had competed in the national finals for Physics, Chemistry, Math, and Chess.
+            </p>
+            <p>
+                My dream was to study physics at university and attempt to unify the forces of nature, but I could not afford tuition. I discovered the <em>Scuola Normale Superiore</em> in Pisa, which offered a full scholarship and a stipend to the top ~10 students in Italy for each theoretical subject. Knowing this was my one shot at an education, I studied relentlessly and secured 1st place in the country for physics.
+            </p>
+            <p>
+                There, I dove deep into my passion for science, learning as much from my brilliant peers as I did from the country's best professors.
+            </p>
+            <p>
+                At the height of the COVID-19 pandemic, I developed a procedure to speed up testing by a factor of 5x. While the procedure succeeded in the lab, we could not get it approved by Italian regulatory authorities due to bureaucratic hurdles, even as other countries adopted similar methods. That experience taught me a crucial lesson: to have a real-world impact, I needed to transition from pure physics to mastering the management of complex, impactful projects.
+            </p>
+            <p>
+                For this reason, 2 weeks after graduating in theoretical physics, I joined Oliver Wyman in Milan as a Management Consultant. There I learned a lot about how companies work.
+            </p>
+            <p>
+                During my period in consulting, ChatGPT come out. To my disbelief, humanity managed to make AI work for something that felt like intelligence to me. I immediately understood this would have changed the world and replace services across the economy (doctors, teachers, etc.). I wanted to contribute to making this technology more accessible and integrated into the economy.
+            </p>
+            <p>
+                So after just over one year, I left consulting and started a research collaboration aimed at reaching artificial general intelligence: Octopus AI.
+            </p>
+            <p>
+                I spent nearly one year trying to improve the state of the art of LLMs by rethinking them from scratch. After numerous attempts, in July 2024, I invented the "Large Concept Model" architecture, that lets LLMs think in concepts, not words, hence making them faster and cheaper.
+            </p>
+            <p>
+                After building a prototype and recruiting my long time friend and programming partner Federico Visintini, we founded Platonic Research based on this idea and raised venture capital.
+            </p>
+            <p>
+                Today, Platonic Research has 5 incredible researchers working full time, with 4 international Olympic medals in sciences among them. We are grateful of the support of our amazing investors, that valued our company 20M$ in the latest funding round.
+            </p>
+            <p>
+                Our Mission is to deploy Artificial General Intelligence in the Economy in the safest way possible.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Marco Eterno. All rights reserved.</p>
+    </footer>
+
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
+            document.getElementById('dark-toggle').textContent = '☀️';
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            document.body.classList.toggle('dark', e.matches);
+            document.getElementById('dark-toggle').textContent = e.matches ? '☀️' : '🌙';
+        });
+        function toggleDark() {
+            document.body.classList.toggle('dark');
+            document.getElementById('dark-toggle').textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        }
+    </script>
+</body>
+</html>

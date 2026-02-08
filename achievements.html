@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements — Marco Eterno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <button id="dark-toggle" onclick="toggleDark()">🌙</button>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">My Story</a>
+        <a href="work.html">Work &amp; Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html" class="active">Achievements</a>
+        <a href="personal.html">Personal</a>
+    </nav>
+
+    <main>
+        <h1 class="page-title">Achievements</h1>
+
+        <section class="page-content">
+            <p class="intro">
+                I value the passion and time spent cultivating skills over accolades. However, for context, here are my past achievements:
+            </p>
+
+            <div class="achievement">
+                <h3>1st National place at PLANCKS (2020)</h3>
+                <p>Theoretical Physics competition for teams of 4 people.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>1st place in physics at the admission test for SNS (2016)</h3>
+                <p>Out of 200+ participants. Won the full scholarship for 5 years.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>Bronze medal in National Physics Olympiad (2016)</h3>
+            </div>
+
+            <div class="achievement">
+                <h3>National Finals Chemistry Olympiad (2015 & 2016)</h3>
+                <p>Participated to the selection for the international phase.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>National Finals Math Olympiad (2016)</h3>
+                <p>Both in the individual competition, and with my team.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>1st world place in "Zero Robotics" (2015)</h3>
+                <p>International team programming competition sponsored by NASA, MIT and ESA. 80+ teams participating.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>Chess National Finals Under 14 (2008)</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Marco Eterno. All rights reserved.</p>
+    </footer>
+
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
+            document.getElementById('dark-toggle').textContent = '☀️';
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            document.body.classList.toggle('dark', e.matches);
+            document.getElementById('dark-toggle').textContent = e.matches ? '☀️' : '🌙';
+        });
+        function toggleDark() {
+            document.body.classList.toggle('dark');
+            document.getElementById('dark-toggle').textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        }
+    </script>
+</body>
+</html>

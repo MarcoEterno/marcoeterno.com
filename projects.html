@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Marco Eterno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <button id="dark-toggle" onclick="toggleDark()">🌙</button>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">My Story</a>
+        <a href="work.html">Work &amp; Education</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="personal.html">Personal</a>
+    </nav>
+
+    <main>
+        <h1 class="page-title">Projects</h1>
+
+        <section class="page-content">
+            <div class="entry">
+                <h3>Master's Thesis in Econophysics</h3>
+                <p class="entry-meta">07/2021 – 05/2022</p>
+                <ul>
+                    <li>Wrote an economy simulator in C. Used Python to analyze data.</li>
+                    <li>My work gives original contributions in Monetary and Fiscal policy.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <h3>Olivia Startup</h3>
+                <p class="entry-meta">10/2020 – 01/2021</p>
+                <ul>
+                    <li>Co-founder of a startup based on machine learning, accelerated by Bocconi for Innovation and LVenture.</li>
+                    <li>Developer of predictive algorithm for restaurants in PyTorch.</li>
+                    <li>Project Leader: coordinated the work of 4 people in the creation of the web interface and in the development of algorithms.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <h3>COVID-19 Testing Improvement</h3>
+                <p class="entry-meta">03/2020 – 06/2020</p>
+                <ul>
+                    <li>Invented a procedure to speed up covid testing by 5x.</li>
+                    <li>Assembled a team of professors and researchers from 3 different universities.</li>
+                    <li>Successfully tested the procedure in the virology lab of Pisa.</li>
+                    <li>Couldn't have it approved in Italy, but variations on our method are used as standard testing procedure all over the world.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Marco Eterno. All rights reserved.</p>
+    </footer>
+
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
+            document.getElementById('dark-toggle').textContent = '☀️';
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            document.body.classList.toggle('dark', e.matches);
+            document.getElementById('dark-toggle').textContent = e.matches ? '☀️' : '🌙';
+        });
+        function toggleDark() {
+            document.body.classList.toggle('dark');
+            document.getElementById('dark-toggle').textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        }
+    </script>
+</body>
+</html>

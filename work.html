@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work & Education — Marco Eterno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <button id="dark-toggle" onclick="toggleDark()">🌙</button>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">My Story</a>
+        <a href="work.html" class="active">Work &amp; Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="personal.html">Personal</a>
+    </nav>
+
+    <main>
+        <h1 class="page-title">Work & Education</h1>
+
+        <section class="page-content">
+            <h2>Professional Experience</h2>
+
+            <div class="entry">
+                <h3>Machine Learning Researcher</h3>
+                <p class="entry-meta">Octopus AI · 10/2023 – Present · Remote</p>
+                <ul>
+                    <li>Started a collaboration of professors, researchers, and companies to experiment new roadmaps to reach AGI.</li>
+                    <li>Trained a GPT2-like architecture from scratch and experimented with variations.</li>
+                    <li>Built a self-improving LLM agent that leverages the scientific method and experiments to build a model of the world.</li>
+                    <li>Invented a recurrent architecture for LLMs with power law information storage behaviour and tunable exponent.</li>
+                    <li>Used Alpha-Zero like Monte Carlo tree search to improve the decoding performance of Language Models.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <h3>Management Consultant</h3>
+                <p class="entry-meta">Oliver Wyman · 06/2022 – 09/2023 · Milan, Italy</p>
+                <ul>
+                    <li>Freed 50+M€ from the reserves of 70 Italian banks by inventing and implementing a data pipeline.</li>
+                    <li>Automatized 100+ hours of work by writing Python scripts.</li>
+                    <li>Responsible for the work of 3 experienced consultants and the weekly reports to client's management.</li>
+                    <li>Contributed to the definition of the strategy for 10+ companies in transportations, energy and banking.</li>
+                </ul>
+            </div>
+
+            <h2>Education</h2>
+
+            <div class="entry">
+                <h3>Scuola Normale Superiore (SNS)</h3>
+                <p class="entry-meta">Second level Master in Physics · 2016 – 2022 · Pisa, Italy · 110/110 with honors</p>
+                <p>Best Italian university for Physics. Full scholarship is granted for the about 10 physicists selected every year.</p>
+            </div>
+
+            <div class="entry">
+                <h3>University of Pisa</h3>
+                <p class="entry-meta">Master of Science in Physics · 2019 – 2022 · Pisa, Italy · 110/110</p>
+            </div>
+
+            <div class="entry">
+                <h3>University of Pisa</h3>
+                <p class="entry-meta">Bachelor's Degree in Physics · 2016 – 2019 · Pisa, Italy · 110/110 with honors</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Marco Eterno. All rights reserved.</p>
+    </footer>
+
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
+            document.getElementById('dark-toggle').textContent = '☀️';
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            document.body.classList.toggle('dark', e.matches);
+            document.getElementById('dark-toggle').textContent = e.matches ? '☀️' : '🌙';
+        });
+        function toggleDark() {
+            document.body.classList.toggle('dark');
+            document.getElementById('dark-toggle').textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        }
+    </script>
+</body>
+</html>

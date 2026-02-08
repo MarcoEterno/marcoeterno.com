@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal — Marco Eterno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <button id="dark-toggle" onclick="toggleDark()">🌙</button>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">My Story</a>
+        <a href="work.html">Work &amp; Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="personal.html" class="active">Personal</a>
+    </nav>
+
+    <main>
+        <h1 class="page-title">Personal</h1>
+
+        <section class="page-content">
+            <p>
+                Beyond my professional and academic life, I consider my greatest accomplishment to be the deep and meaningful relationships I have built with my friends. Most of these bonds were forged at university; <em>Scuola Normale</em> is a gathering place for the sharpest minds in Italy, and I feel incredibly fortunate to call some of the kindest, most driven, and thoughtful people I met there my close friends.
+            </p>
+            <p>
+                Outside of work and spending time with friends: I like running in nature and cooking. I used to do scuba diving, free diving and windsurf and to play the piano, and hope to get back to those when and if my professional life ever becomes less demanding.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Marco Eterno. All rights reserved.</p>
+    </footer>
+
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
+            document.getElementById('dark-toggle').textContent = '☀️';
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            document.body.classList.toggle('dark', e.matches);
+            document.getElementById('dark-toggle').textContent = e.matches ? '☀️' : '🌙';
+        });
+        function toggleDark() {
+            document.body.classList.toggle('dark');
+            document.getElementById('dark-toggle').textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        }
+    </script>
+</body>
+</html>
